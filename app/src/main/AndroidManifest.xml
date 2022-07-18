@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.growup">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+
+        <!-- Request legacy Bluetooth permissions on older devices. -->
+        <uses-permission android:name="android.permission.BLUETOOTH"
+            android:maxSdkVersion="30" />
+        <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"
+            android:maxSdkVersion="30" />
+
+        <!-- Needed only if your app looks for Bluetooth devices.
+             If your app doesn't use Bluetooth scan results to derive physical
+             location information, you can strongly assert that your app
+             doesn't derive physical location. -->
+        <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+        <!-- Needed only if your app makes the device discoverable to Bluetooth
+             devices. -->
+        <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+        <!-- Needed only if your app communicates with already-paired Bluetooth
+             devices. -->
+        <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- Always include this permission -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Include only if your app benefits from precise location access. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.bluetooth" android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GrowUp">
+        <activity
+            android:name=".view.PlantDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.BluetoothActivity"
+            android:exported="false"
+            android:label="Connections" />
+        <activity
+            android:name=".view.AddPlantActivity"
+            android:exported="false"
+            android:label="Add plant" />
+        <activity
+            android:name=".view.PlantListActivity"
+            android:exported="true"
+            android:label="Plants">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".control.plant.WateringAlertReceiver"/>
+    </application>
+
+
+</manifest>

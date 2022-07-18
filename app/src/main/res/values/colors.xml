@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mindaro">#DCF763</color>
+    <color name="lightmindaro">#e2fa78</color>
+    <color name="charcoal">#435058</color>
+    <color name="grey">#848C8E</color>
+    <color name="silver">#BFB7B6</color>
+    <color name="turquoise">#FF018786</color>
+    <color name="lightturquoise">#00c7c6</color>
+    <color name="lightgrey">#F1F2EE</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#f55045</color>
+    <color name="darkred">#ad3831</color>"
+</resources>

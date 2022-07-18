@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bluetoothTab"
+        android:title="Connections"
+        android:icon="@drawable/ic_bt"/>
+    <item
+        android:id="@+id/myplantsTab"
+        android:title="Plants"
+        android:icon="@drawable/ic_plant"/>
+    <item
+        android:id="@+id/addplantTab"
+        android:title="Add plant"
+        android:icon="@drawable/ic_add"
+        />
+
+
+</menu>
